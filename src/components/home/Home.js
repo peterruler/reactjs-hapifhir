@@ -33,14 +33,14 @@ const createSampleData = () => {
 }
 const Home = () => {
   const marginSendBtn = {'marginTop': '15px'};
-  let qid  = localStorage.getItem("QuestionnaireRuleID");
+  let PID  = localStorage.getItem("QuestionnaireRuleID");
   return (
     <div>
       <h1>Home Page</h1>
         <nav id="vert-nav">
-                <Button onClick={createSampleData} style={marginSendBtn} variant="contained" color="primary"  endIcon={<SendIcon />}>ERSTELE QUESTIONAIRE RESOURCE</Button>
+                <Button onClick={createSampleData} style={marginSendBtn} variant="contained" color="primary"  endIcon={<SendIcon />}>ERSTELLE QUESTIONNAIRE RESOURCE</Button>
                 <br />
-                <Link to={`/patientensuche-questionaire/${qid}`} className="patientensuche-link">
+                <Link to={`/patientensuche-questionaire/${PID}`} className="patientensuche-link">
                 <span className="arrow">
                     <ArrowRightIcon />&nbsp;
                 </span>
