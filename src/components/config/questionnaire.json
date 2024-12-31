@@ -1,0 +1,142 @@
+{
+    "resourceType": "Questionnaire",
+    "id": "-1",
+    "text": {
+      "status": "generated",
+      "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">\n      <pre>KSW Covid-19 Questionnaire\n  1. First Question?\n till 23. Last Question\n</pre>\n    </div>"
+    },
+    "url": "https://hapi.fhir.org/baseR4/Questionnaire/2569991?_pretty=true",
+    "status": "active",
+    "subjectType": [
+      "Patient"
+    ],
+    "date": "2021",
+    "text": {
+      "status": "generated",
+      "item": [ {
+        "linkId": "1",
+        "text": "Fieber > 38℃",
+        "type": "boolean"
+      },
+      {
+          "linkId": "2",
+          "text": "Kopfschmerzen",
+          "type": "boolean"
+        },
+        {
+          "linkId": "3",
+          "text": "Magen-/Darm Beschwerden",
+          "type": "boolean"
+        },
+        {
+          "linkId": "4",
+          "text": "Hautauschläge",
+          "type": "boolean"
+        },
+        {
+          "linkId": "5",
+          "text": "Husten",
+          "type": "boolean"
+        },
+        {
+          "linkId": "6",
+          "text": "Brustschmerzen",
+          "type": "boolean"
+        },
+        {
+          "linkId": "7",
+          "text": "Geruchs- oder Geschmacksverlust",
+          "type": "boolean"
+        },
+        {
+          "linkId": "8",
+          "text": "Andere Symptome: (Symptom1, Symptom2, etc)?",
+          "type": "string"
+        },
+        {
+          "linkId": "9",
+          "text": "Atembeschwerden",
+          "type": "boolean"
+        },
+        {
+          "linkId": "10",
+          "text": "Halsschmerzen",
+          "type": "boolean"
+        },
+        {
+          "linkId": "11",
+          "text": "Muskelschmerzen",
+          "type": "boolean"
+        },
+        {
+          "linkId": "12",
+          "text": "Diabetes",
+          "type": "boolean"
+        },
+        {
+          "linkId": "13",
+          "text": "Chronische Nierenerkrankung",
+          "type": "boolean"
+        },
+        {
+          "linkId": "14",
+          "text": "Chronische Atemwegserkrankung",
+          "type": "boolean"
+        },
+        {
+          "linkId": "15",
+          "text": "Raucher",
+          "type": "boolean"
+        },
+        {
+          "linkId": "16",
+          "text": "Herz-Kreislauf-Erkrankung",
+          "type": "boolean"
+        },
+        {
+          "linkId": "17",
+          "text": "Hoher Blutdruck",
+          "type": "boolean"
+        },
+        {
+          "linkId": "18",
+          "text": "Übergewicht (BMI>35)",
+          "type": "boolean"
+        },
+        {
+          "linkId": "19",
+          "text": "Schwanger",
+          "type": "boolean"
+        },
+        {
+          "linkId": "20",
+          "text": "Immunsuppression",
+          "type": "boolean"
+        },
+        {
+          "linkId": "21",
+          "text": "Krebs",
+          "type": "boolean"
+        },
+        {
+          "linkId": "22",
+          "text": "keine",
+          "type": "boolean"
+        },
+        {
+          "linkId": "23",
+          "text": "Andere Krankheiten: (Krankheit1, Krankheit2, etc)?",
+          "type": "string"
+        },
+        {
+          "linkId": "24",
+          "text": "Keine Symptome",
+          "type": "boolean"
+        },
+        {
+          "linkId": "25",
+          "text": "Beginn der Symptome",
+          "type": "string"
+        }
+      ]}
+  }

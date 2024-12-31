@@ -1,11 +1,54 @@
 // src/components/home/Home.js
-import React from 'react';
+import * as React from 'react';
+import { NavLink } from "react-router";
+import Button from '@mui/material/Button';
+import ArrowRightIcon from '@mui/icons-material/ArrowRight';
+import SendIcon from '@mui/icons-material/Send';
+import { useParams } from "react-router";
+import { Link } from 'react-router-dom';
 
+const CONFIG = require('../config/config.json');
+const PATH = CONFIG.base_uri;
+const questionaireID = -1;
+const createSampleData = () => {
+    const questionnaireJSON = require('../config/questionnaire.json');
+    questionnaireJSON.url = "https://hapi.fhir.org/baseR4/Questionnaire/2569991?_pretty=true";
+    const URL = PATH + 'Questionnaire?_format=json&_pretty=true';
+    fetch(URL, {//NOTE: Cached http:// protocol leads to error
+      method: 'POST', // or 'PUT'
+      headers: {
+      'Content-Type': 'application/fhir+json;charset=utf-8',
+      },
+      body: JSON.stringify(questionnaireJSON),
+  })
+  .then(response => response.json())
+  .then(data => {
+    let pruleid = data.id;
+    alert("Success, the generated rule id is: " + pruleid);
+    localStorage.setItem("QuestionnaireRuleID", pruleid);
+  })
+  .catch((error) => {
+      alert("Erstellen der Qwestionnaire Resource fehlgeschlagen! Error: " + error + " " + URL);
+  });
+}
 const Home = () => {
+  const marginSendBtn = {'marginTop': '15px'};
+  let qid  = localStorage.getItem("QuestionnaireRuleID");
   return (
     <div>
       <h1>Home Page</h1>
-      <p>Welcome to the home page!</p>
+        <nav id="vert-nav">
+                <Button onClick={createSampleData} style={marginSendBtn} variant="contained" color="primary"  endIcon={<SendIcon />}>ERSTELE QUESTIONAIRE RESOURCE</Button>
+                <br />
+                <Link to={`/patientensuche-questionaire/${qid}`} className="patientensuche-link">
+                <span className="arrow">
+                    <ArrowRightIcon />&nbsp;
+                </span>
+                Patientensuche & Questionnaire
+                </Link>
+                <br />
+                <NavLink to="https://hapi.fhir.org/baseR4"><span className="arrow"><ArrowRightIcon/>&nbsp;</span>Hapi FHIR Client</NavLink>
+        </nav>
     </div>
   );
 };
