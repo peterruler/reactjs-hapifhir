@@ -1,38 +1,138 @@
-.App {
-  text-align: center;
-}
+@media screen {
+  #root {
+      margin: 0 15px;
+      max-width: 40em;
+  }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+  body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+          'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+          sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  code {
+      font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+          monospace;
+  }
+
+  #logo {
+      margin-left: 5px;
+  }
+
+  #main-nav {
+      display: inline-block;
+      margin-bottom: 20px;
+  }
+
+  #main-nav li {
+      margin-right: 10px;
+      float: left;
+  }
+
+  ul#main-nav li .MuiButton-label {
+      margin: 0 15px;
+  }
+
+  ul {
+      margin: 0;
+      padding: 0;
+      width: 85%;
+      list-style-type: none;
+  }
+
+  ul li .MuiButton-text {
+      padding: 0;
+  }
+
+  textarea.MuiInputBase-input {
+      width: 300px;
+  }
+
+  #chart {
+      background: #fff;
+      width: 90%;
+      margin: 1em auto;
+  }
+
+  .config-screen {
+      width: 100%;
+      height: auto;
+  }
+
+  .arrow {
+      color: #2041A6;
+      top: 7px;
+      position: relative;
+  }
+
+  a:link,
+  a:visited,
+  a:hover,
+  a:active {
+      color: #2041A6;
+  }
+
+  a:hover {
+      -webkit-animation: glow 1s ease-in-out infinite alternate;
+      -moz-animation: glow 1s ease-in-out infinite alternate;
+      animation: glow 1s ease-in-out infinite alternate;
+  }
+
+  @media screen and (max-width:500px) {
+      #chart {
+          width: 100%;
+          height: 500px;
+      }
+
+      #chart text {
+          font-size: 1rem;
+      }
+  }
+
+  @-webkit-keyframes glow {
+      from {
+          text-shadow: 0 0 0 rgba(91, 249, 255, 0.3), 0 0 0 rgba(91, 249, 255, 0.3), 0 0 0px rgba(91, 249, 255, 0.3), 0 0 10px rgba(91, 249, 255, 0.3), 0 0 20px rgba(91, 249, 255, 0.3), 0 0 30px rgba(91, 249, 255, 0.3), 0 0 40px rgba(91, 249, 255, 0.3);
+      }
+
+      to {
+          text-shadow: 0 0 0 rgba(91, 249, 255, 0.3), 0 0 0 rgba(91, 249, 255, 0.3), 0 0 0px rgba(91, 249, 255, 0.3), 0 0 10px rgba(91, 249, 255, 0.3), 0 0 20px rgba(91, 249, 255, 0.3), 0 0 30px rgba(91, 249, 255, 0.3), 0 0 40px rgba(91, 249, 255, 0.3);
+      }
+  }
+
+  .blink_me {
+      animation: blinker 1s linear infinite;
+  }
+
+  @keyframes blinker {
+      50% {
+          opacity: 0;
+      }
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@media screen and (min-width: 768px) {
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  #root #email-address,
+  #root #start_symptoms,
+  .cls-search-patient #name,
+  .cls-search-patient #birthdate {
+      width: 450px !important;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 1200px) {
+
+  #root #email-address,
+  #root #start_symptoms,
+  .cls-search-patient #name,
+  .cls-search-patient #birthdate {
+      width: 300px !important;
+  }
+
+  .config-screen {
+      width: 450px;
   }
 }

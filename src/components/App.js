@@ -4,13 +4,19 @@ import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Home from './home/Home';
 import About from './about/About';
 import Contact from './contact/Contact';
+import logo from '../assets/images/ksw-logo.jpg';
+import './App.css'  
 
 const App = () => {
   return (
+    <>
+    <div>
+      <img src={logo} alt="KSW Logo" />
+    </div>
     <Router>
       <div>
         <nav>
-          <ul>
+          <ul id="main-nav">
             <li>
               <Link to="/">Home</Link>
             </li>
@@ -30,6 +36,7 @@ const App = () => {
         </Routes>
       </div>
     </Router>
+    </>
   );
 };
 
