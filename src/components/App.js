@@ -5,6 +5,7 @@ import Home from './home/Home';
 import Patientensuche from './patientensuche/Patientensuche';
 import About from './about/About';
 import Contact from './contact/Contact';
+import PatientDetail from './patient-detail/PatientDetail.js'
 import logo from '../assets/images/ksw-logo.jpg';
 import './App.css'  
 
@@ -19,10 +20,10 @@ const App = () => {
         <nav>
           <ul id="main-nav">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Start</Link>
             </li> 
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/patientensuche-questionaire/-1">Suche nach Pid</Link>
             </li>
             <li>
               <Link to="/contact">Contact</Link>
@@ -33,6 +34,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/patientensuche-questionaire/:PID" element={<Patientensuche />} />
+          <Route path="/patient-detail" element={<PatientDetail />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

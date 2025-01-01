@@ -1,23 +1,18 @@
-import { React, useState, useEffect } from 'react';
-import { useParams } from 'react-router';
+import { React, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import TextField from '@mui/material/TextField';
-import { useNavigate } from 'react-router-dom';
 
 const Patientensuche = () => {
   const navigate = useNavigate();
   
-  let { QID } = useParams();
-
-  let PID = -1; // test id is 596528
+  // test pid is 596528
 
   const [data, setData] = useState({
     error: false,
     helperText: "",
     PID: ""
   });
-
-  const marginSendBtn = { 'marginTop': '15px' };
 
   const config = require('../config/config.json');
   const BASE_URI = config.base_uri;
@@ -43,7 +38,7 @@ const Patientensuche = () => {
 
             localStorage.setItem("patientPID", result.id);
 
-            navigate('/next-page');
+            navigate('/patient-detail');
           } else {
             setData({
               helperText: "Patient mit dieser PID existiert nicht!",
@@ -80,7 +75,7 @@ const Patientensuche = () => {
         />
         <Button
           onClick={performSearch}
-          style={marginSendBtn}
+          style={{ 'marginTop': '15px' }}
           variant="contained"
           color="primary"
           id="search-patient-name"

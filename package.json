@@ -7,10 +7,12 @@
     "@emotion/styled": "^11.14.0",
     "@mui/icons-material": "^6.3.0",
     "@mui/material": "^6.3.0",
+    "@mui/styles": "^6.3.0",
     "@testing-library/jest-dom": "^5.17.0",
     "c3": "^0.4.24",
     "cors": "^2.8.5",
     "cra-template": "1.2.0",
+    "date-fns": "^4.1.0",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
     "react": "^19.0.0",
@@ -21,7 +23,8 @@
     "web-vitals": "^4.2.4"
   },
   "scripts": {
-    "start": "./run.sh",
+    "start": "react-scripts start",
+    "start2": "./run.sh",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

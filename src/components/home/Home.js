@@ -1,15 +1,13 @@
 // src/components/home/Home.js
 import * as React from 'react';
 import { NavLink } from "react-router";
+import { Link } from 'react-router-dom';
 import Button from '@mui/material/Button';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import SendIcon from '@mui/icons-material/Send';
-import { useParams } from "react-router";
-import { Link } from 'react-router-dom';
 
 const CONFIG = require('../config/config.json');
 const PATH = CONFIG.base_uri;
-const questionaireID = -1;
 const createSampleData = () => {
     const questionnaireJSON = require('../config/questionnaire.json');
     questionnaireJSON.url = "https://hapi.fhir.org/baseR4/Questionnaire/2569991?_pretty=true";
