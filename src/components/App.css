@@ -81,6 +81,16 @@
       animation: glow 1s ease-in-out infinite alternate;
   }
 
+  .c3-title {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+
+  .birthdayPicker {
+    margin-left:8px;
+  }
+  
   @media screen and (max-width:500px) {
       #chart {
           width: 100%;
@@ -134,12 +144,6 @@
 
   .config-screen {
       width: 450px;
-  }
-
-  .c3-title {
-    font-size: 3em;
-    font-weight: bold;
-    margin: 0 auto;
   }
   
 }

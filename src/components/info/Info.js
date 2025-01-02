@@ -18,10 +18,10 @@ class Info extends React.Component {
                 <li>Statistik einsehen.</li>
             </ol>            
             <h3>Die Questionnaire App hat folgende Konfiguration</h3>
-        <img class="config-screen" src={envConfig} width="837" height="201" alt="env config screenshot"/>
+        <img className="config-screen" src={envConfig} width="837" height="201" alt="env config screenshot"/>
         <p>Die Uri Parameter und Port werden für Links, Ajax Anfragen und den Nodemailer benötigt.</p>
         <hr />
-        <img class="config-screen" src={appConfig} width="731" height="364" alt="app config screenshot"/>
+        <img className="config-screen" src={appConfig} width="731" height="364" alt="app config screenshot"/>
         <p>Die «rules_warning» Regel legt fest, welche Kombinationen von Symptomen und Krankheiten die Warnungs-Benachrichtigung auslösen.</p>
         <p>Der «max_checked_symptoms» Parameter legt eine Schwelle fest, ab welcher Anzahl gewählter Symptome und Krankheiten eine Warnnachricht gesendet werden soll. </p>
         <p>Felder, die keinen Einfluss auf die Benachrichtigung haben sollen, werden mittels «exclude_symptoms» ausgeschlossen.</p>

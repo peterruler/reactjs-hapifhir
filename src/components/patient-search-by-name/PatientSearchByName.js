@@ -70,7 +70,7 @@ const PatientSearchByName = () => {
               }}
             />
           </li>
-          <li>
+          <li className='birthdayPicker'>
             <BirthdayDatePicker />
           </li>
         </ul>
