@@ -1,0 +1,9 @@
+{
+    "rules_warning" : [
+        [3,1,2,4],
+        [6,5],
+        [7]
+    ],
+    "max_checked_symptoms" : 5,
+    "exclude_symptoms" : [8,22,23,24,25]
+}

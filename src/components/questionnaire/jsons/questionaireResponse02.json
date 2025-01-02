@@ -1,0 +1,191 @@
+{
+    "resourceType": "QuestionnaireResponse",
+    "id": "-1",
+    "subject" : {
+      "reference": "Patient/PATIENT_ID"
+    },
+    "questionnaire" : "Questionnaire/253",
+    "meta": {
+      "versionId": "1",
+      "lastUpdated": "2021-04-04T16:30:00.000+00:00",
+      "source": "#xvzf"
+    },
+    "status": "completed",
+    "authored": "",
+    "item": [ {
+      "linkId": "1",
+      "text": "Fieber > 38℃",
+      "answer": [ {
+        "valueBoolean": "false"
+      }]
+    },
+    {
+        "linkId": "2",
+        "text": "Kopfschmerzen",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "3",
+        "text": "Magen-/Darm Beschwerden",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "4",
+        "text": "Hautauschläge",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "5",
+        "text": "Husten",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "6",
+        "text": "Brustschmerzen",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "7",
+        "text": "Geruchs- oder Geschmacksverlust",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "8",
+        "text": "Andere Symptome: (Symptom1, Symptom2, etc)?",
+        "answer": [ {
+          "valueBoolean": "keine"
+        }]
+      },
+      {
+        "linkId": "9",
+        "text": "Atembeschwerden",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "10",
+        "text": "Halsschmerzen",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "11",
+        "text": "Muskelschmerzen",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "12",
+        "text": "Diabetes",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "13",
+        "text": "Chronische Nierenerkrankung",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "14",
+        "text": "Chronische Atemwegserkrankung",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "15",
+        "text": "Raucher",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "16",
+        "text": "Herz-Kreislauf-Erkrankung",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "17",
+        "text": "Hoher Blutdruck",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "18",
+        "text": "Übergewicht (BMI>35)",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "19",
+        "text": "Schwanger",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "20",
+        "text": "Immunsuppression",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "21",
+        "text": "Krebs",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "22",
+        "text": "keine",
+        "answer": [ {
+          "valueBoolean": "false"
+        }]
+      },
+      {
+        "linkId": "23",
+        "text":"Andere Krankheiten: (Krankheit1, Krankheit2, etc)?",
+        "answer": [ {
+          "valueString": "keine"
+        }]
+      },
+      {
+        "linkId": "24",
+        "text": "Keine Symptome",
+        "answer": [ {
+          "valueBoolean": "true"
+        }]
+      },
+      {
+        "linkId": "25",
+        "text": "Beginn der Symptome",
+        "answer": [ {
+          "valueDate": ""
+        }]
+      }
+    ]
+}
