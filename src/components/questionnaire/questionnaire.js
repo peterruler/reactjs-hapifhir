@@ -743,7 +743,7 @@ let GotoStartRedirect = () => {
     const navigate = useNavigate();
   
     let handleClick = () => {
-      navigate("/some-page"); 
+      navigate("/success-page"); 
     }
   
     return (

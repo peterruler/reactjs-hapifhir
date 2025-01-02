@@ -9,6 +9,7 @@ import PatientSearchByName from './patient-search-by-name/PatientSearchByName.js
 import PatientDetail from './patient-detail/PatientDetail.js'
 import Questionnaire from './questionnaire/questionnaire'
 import PatientList from './patient-list/PatientList.js'
+import SuccessPage from './success-page/SuccessPage.js'
 import logo from '../assets/images/ksw-logo.jpg';
 import './App.css'  
 
@@ -45,6 +46,7 @@ const App = () => {
           <Route path="/questionnaire/*" element={<Questionnaire />} />
           <Route path="/patient-list/*" element={<PatientList />} />
           <Route path="/about" element={<About />} />
+          <Route path="/success-page" element={<SuccessPage />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
