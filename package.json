@@ -25,6 +25,7 @@
   "scripts": {
     "start": "react-scripts start",
     "start2": "./run.sh",
+    "start1A": "node app.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
