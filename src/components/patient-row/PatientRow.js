@@ -30,8 +30,8 @@ const PatientRow = ({ id, name, given, birthDate, gender }) => {
           className="redirect-btn"
           onClick={handleSaveToLocalStorage}
         >
-<button class="redirect-btn" type="button">#{id}  <span>&nbsp;|&nbsp;</span>
-{given} {name} - {formattedBirthDate}&nbsp;{genderText}</button>
+        <button class="redirect-btn" type="button">#{id}  <span>&nbsp;|&nbsp;</span>
+        {given} {name} - {formattedBirthDate}&nbsp;{genderText}</button>
         </Link>
       </div>
     </li>
