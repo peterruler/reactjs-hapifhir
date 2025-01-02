@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import PatientRow from '../patient-row/PatientRow';
-import Questionnaire from '../questionnaire/questionnaire.js';
 
 const PatientsList = () => {
   const [patients, setPatients] = useState([]);

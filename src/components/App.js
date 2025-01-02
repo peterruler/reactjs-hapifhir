@@ -11,6 +11,7 @@ import Questionnaire from './questionnaire/questionnaire'
 import PatientList from './patient-list/PatientList.js'
 import SuccessPage from './success-page/SuccessPage.js'
 import Stats from './stats/Stats.js'
+import Info from './info/Info.js'
 import logo from '../assets/images/ksw-logo.jpg';
 import './App.css'  
 
@@ -37,7 +38,10 @@ const App = () => {
               <Link to="/stats">Statistik</Link>
             </li>
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/info">Info</Link>
+            </li>
+            <li>
+              <Link to="/contact">Kontakt</Link>
             </li>
           </ul>
         </nav>
@@ -52,6 +56,7 @@ const App = () => {
           <Route path="/about" element={<About />} />
           <Route path="/success-page" element={<SuccessPage />} />
           <Route path="/stats" element={<Stats />} />
+          <Route path="/info" element={<Info />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>

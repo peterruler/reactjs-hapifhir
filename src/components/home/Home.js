@@ -31,7 +31,6 @@ const createSampleData = () => {
 }
 const Home = () => {
   const marginSendBtn = {'marginTop': '15px'};
-  let PID  = localStorage.getItem("QuestionnaireRuleID");
   return (
     <div>
       <h1>Home Page</h1>
