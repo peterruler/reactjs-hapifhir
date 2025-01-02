@@ -51,6 +51,7 @@ const PatientSearchByName = () => {
 
   return (
     <div className="cls-search-patient">
+      <h1>Patientensuche nach Name</h1>
       <fieldset>
         <legend>Suche</legend>
         <ul>

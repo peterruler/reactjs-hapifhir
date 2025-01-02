@@ -135,4 +135,11 @@
   .config-screen {
       width: 450px;
   }
+
+  .c3-title {
+    font-size: 3em;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+  
 }

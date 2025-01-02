@@ -59,7 +59,7 @@ const Patientensuche = () => {
 
   return (
     <div>
-      <h1>Patientensuche</h1>
+      <h1>Patientensuche nach PID</h1>
       <fieldset>
         <legend>Suche nach PID</legend>
         <TextField

@@ -38,7 +38,7 @@ const Home = () => {
         <nav id="vert-nav">
                 <Button onClick={createSampleData} style={marginSendBtn} variant="contained" color="primary"  endIcon={<SendIcon />}>ERSTELLE QUESTIONNAIRE RESOURCE</Button>
                 <br />
-                <Link to={`/patientensuche-questionaire/${PID}`} className="patientensuche-link">
+                <Link to={`/patient-search-by-name/`} className="patientensuche-link">
                 <span className="arrow">
                     <ArrowRightIcon />&nbsp;
                 </span>

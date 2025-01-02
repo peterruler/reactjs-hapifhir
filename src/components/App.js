@@ -10,6 +10,7 @@ import PatientDetail from './patient-detail/PatientDetail.js'
 import Questionnaire from './questionnaire/questionnaire'
 import PatientList from './patient-list/PatientList.js'
 import SuccessPage from './success-page/SuccessPage.js'
+import Stats from './stats/Stats.js'
 import logo from '../assets/images/ksw-logo.jpg';
 import './App.css'  
 
@@ -33,6 +34,9 @@ const App = () => {
               <Link to="/patient-search-by-name">Suche nach Patientenname</Link>
             </li>
             <li>
+              <Link to="/stats">Statistik</Link>
+            </li>
+            <li>
               <Link to="/contact">Contact</Link>
             </li>
           </ul>
@@ -47,6 +51,7 @@ const App = () => {
           <Route path="/patient-list/*" element={<PatientList />} />
           <Route path="/about" element={<About />} />
           <Route path="/success-page" element={<SuccessPage />} />
+          <Route path="/stats" element={<Stats />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
