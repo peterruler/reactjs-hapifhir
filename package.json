@@ -1,5 +1,5 @@
 {
-  "name": "ps-hapifhir",
+  "name": "reactjs-hapifhir",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -48,5 +48,8 @@
       "last 1 safari version"
     ]
   },
-  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610"
+  "packageManager": "yarn@1.22.22+sha1.ac34549e6aa8e7ead463a7407e1c7390f61a6610",
+  "engines": {
+    "node": "22.x"
+  }
 }
