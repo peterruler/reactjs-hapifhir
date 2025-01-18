@@ -15,7 +15,7 @@ const algo_config = require('../config/app-config.json');
 /* 
 HERE: Change to existing Questionnaire ID from HAPI_FHIR Server for this Form
 */
-let pruleid = localStorage.getItem("QuestionnaireRuleID") ;
+let pruleid = sessionStorage.getItem("QuestionnaireRuleID") ;
 
 let QUESTIONNAIRE_ID = 1;
 if(typeof pruleid !== 'string') {
@@ -27,8 +27,8 @@ class Questionnaire extends React.Component {
         super(props);
         this.state = {};
 
-        this.pid = localStorage.getItem("patientPID");
-        this.qid = localStorage.getItem("patientQID");
+        this.pid = sessionStorage.getItem("patientPID");
+        this.qid = sessionStorage.getItem("patientQID");
 
         //additional
         this.state.checked_covid19_001 = this.props.value || false;
@@ -247,7 +247,7 @@ class Questionnaire extends React.Component {
             //END Diseases
             
             questionRespJSON.subject.reference =  "Patient/" + this.getPatientId();
-            questionRespJSON.questionnaire =  "Questionnaire/" + localStorage.getItem("QuestionnaireRuleID");
+            questionRespJSON.questionnaire =  "Questionnaire/" + sessionStorage.getItem("QuestionnaireRuleID");
             const event = new Date();
             questionRespJSON.authored =  event.toISOString();
             
@@ -277,7 +277,7 @@ class Questionnaire extends React.Component {
                 })
                 .then(response => {
                     alert('Warn-E-Mail wurde abgesendet!');
-                    _self.resetLocalStorage()
+                    _self.resetSessionStorage()
                 })
                 .catch((error) => {
                     console.error('Error:', error);
@@ -295,11 +295,11 @@ class Questionnaire extends React.Component {
                 .then(data => {
                     console.log("Success, the generated id is: " + data.id);
                     let qid = data.id;
-                    let pid = localStorage.getItem("patientPID");
+                    let pid = sessionStorage.getItem("patientPID");
                     document.getElementById("successAlertBottom").style.visibility  ="visible";
-                    document.querySelector("#successAlertBottom .MuiAlert-message").innerHTML = '<div id="">Rule: ' + localStorage.getItem("QuestionnaireRuleID") + ' mit Person mit pid=' + pid + ' und '+
+                    document.querySelector("#successAlertBottom .MuiAlert-message").innerHTML = '<div id="">Rule: ' + sessionStorage.getItem("QuestionnaireRuleID") + ' mit Person mit pid=' + pid + ' und '+
                     ' Fragebogen mit qid=' + qid + ' wurde erfolgreich gespeichert!';
-                    _self.resetLocalStorage();
+                    _self.resetSessionStorage();
                 })
                 .catch((error) => {
                     console.error('Error:', error);
@@ -311,11 +311,11 @@ class Questionnaire extends React.Component {
         const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         return re.test(String(emailaddr).toLowerCase());
     }
-    resetLocalStorage = () => {
-        localStorage.removeItem("patient");
-        localStorage.removeItem("patients");
-        localStorage.removeItem("patientPID");
-        localStorage.removeItem("patientQID");
+    resetSessionStorage = () => {
+        sessionStorage.removeItem("patient");
+        sessionStorage.removeItem("patients");
+        sessionStorage.removeItem("patientPID");
+        sessionStorage.removeItem("patientQID");
         setTimeout(function(){
             document.getElementById("redirect-to-start-btn").click();
         },5000);
@@ -370,7 +370,7 @@ class Questionnaire extends React.Component {
     }
 
     getPatientId = () => {
-        return localStorage.getItem("patientPID");
+        return sessionStorage.getItem("patientPID");
     }
     
     render() {

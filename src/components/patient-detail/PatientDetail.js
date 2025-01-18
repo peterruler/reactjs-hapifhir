@@ -10,9 +10,9 @@ function PatientDetail() {
   const [patient, setPatient] = useState({});
   const navigate = useNavigate();
 
-  // Fetch patient data from localStorage on mount
+  // Fetch patient data from sessionStorage on mount
   useEffect(() => {
-    const patientObj = JSON.parse(localStorage.getItem('patient'));
+    const patientObj = JSON.parse(sessionStorage.getItem('patient'));
     setPatient(patientObj || {});
   }, []);
 

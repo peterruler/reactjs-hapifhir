@@ -1,3 +1,4 @@
+import cubeImage from './cube.gif'
 let addLoader = () => {
     removeLoader();
     let outDiv = document.getElementById("output");
@@ -7,7 +8,7 @@ let addLoader = () => {
     let img = document.createElement('img');
     img.width = "200";
     img.height = "200";
-    img.src = "./cube.gif";
+    img.src = cubeImage;
     div.appendChild(img);
     if (outDiv === null) {
         let elem = document.createElement('div');

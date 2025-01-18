@@ -28,7 +28,7 @@ const Patientensuche = () => {
         .then((response) => response.json())
         .then((result) => {
           if (!isEmpty(result) && result.resourceType === 'Patient') {
-            localStorage.setItem("patient", JSON.stringify(result));
+            sessionStorage.setItem("patient", JSON.stringify(result));
 
             setData({
               helperText: "",
@@ -36,7 +36,7 @@ const Patientensuche = () => {
               PID: result.id
             });
 
-            localStorage.setItem("patientPID", result.id);
+            sessionStorage.setItem("patientPID", result.id);
 
             navigate('/patient-detail');
           } else {

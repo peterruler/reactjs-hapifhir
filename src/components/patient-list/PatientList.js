@@ -6,7 +6,7 @@ const PatientsList = () => {
 
   useEffect(() => {
     // Logic for fetching data when the component mounts
-    const storedPatients = JSON.parse(localStorage.getItem("patients"));
+    const storedPatients = JSON.parse(sessionStorage.getItem("patients"));
     if (storedPatients) {
       setPatients(storedPatients);
     }

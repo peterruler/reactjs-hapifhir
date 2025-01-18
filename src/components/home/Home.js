@@ -23,7 +23,7 @@ const createSampleData = () => {
   .then(data => {
     let pruleid = data.id;
     alert("Success, the generated rule id is: " + pruleid);
-    localStorage.setItem("QuestionnaireRuleID", pruleid);
+    sessionStorage.setItem("QuestionnaireRuleID", pruleid);
   })
   .catch((error) => {
       alert("Erstellen der Qwestionnaire Resource fehlgeschlagen! Error: " + error + " " + URL);

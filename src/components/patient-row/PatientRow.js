@@ -17,9 +17,9 @@ const PatientRow = ({ id, name, given, birthDate, gender }) => {
   const genderText =
     gender === "male" ? "männlich" : gender === "female" ? "weiblich" : "other";
 
-  const handleSaveToLocalStorage = () => {
-    localStorage.setItem("patientPID", id);
-    localStorage.setItem("patientQID", QUESTIONNAIRE_ID);
+  const handleSaveToSessionStorage = () => {
+    sessionStorage.setItem("patientPID", id);
+    sessionStorage.setItem("patientQID", QUESTIONNAIRE_ID);
   };
 
   return (
@@ -28,7 +28,7 @@ const PatientRow = ({ id, name, given, birthDate, gender }) => {
         <Link
           to={`/questionnaire/${id}/${QUESTIONNAIRE_ID}`}
           className="redirect-btn"
-          onClick={handleSaveToLocalStorage}
+          onClick={handleSaveToSessionStorage}
         >
         <button class="redirect-btn" type="button">#{id}  <span>&nbsp;|&nbsp;</span>
         {given} {name} - {formattedBirthDate}&nbsp;{genderText}</button>

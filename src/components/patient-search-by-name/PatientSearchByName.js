@@ -40,8 +40,8 @@ const PatientSearchByName = () => {
         removeLoader();
         if (result && result.entry) {
           const pid = result.entry[0].resource.id;
-          localStorage.setItem("patients", JSON.stringify(result.entry));
-          localStorage.setItem("patientPID", pid);
+          sessionStorage.setItem("patients", JSON.stringify(result.entry));
+          sessionStorage.setItem("patientPID", pid);
           navigate("/patient-list");
         } else {
           console.error("Search didn't return a result!");
